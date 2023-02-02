@@ -85,12 +85,3 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
    
    	python detect_cam.py --model_def config/yolov3-custom3C.cfg --weights_path checkpoints/yolov3_ckpt_252.pth --class_path data/custom/classes.names --conf_thres 0.6
    
-
-### Basado en el trabajo de Erik Linder
-   https://github.com/eriklindernoren
-
-### Dataset original
-   https://www.tooploox.com/blog/card-detection-using-yolo-on-android
-
-# **Canal de Youtube**
-[Click aquì pare ver mi canal de YOUTUBE](https://www.youtube.com/channel/UCr_dJOULDvSXMHA1PSHy2rg)
