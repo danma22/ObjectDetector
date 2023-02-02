@@ -75,13 +75,13 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
     
   Entrenamiento
 	
-  	$!python train.py --model_def config/yolov3-custom3C.cfg --data_config config/custom.data --epochs 200 --batch_size 4 --pretrained_weights weights/darknet53.conv.74
+  	$!python train.py --model_def config/yolov3-custom.cfg --data_config config/custom.data --epochs 200 --batch_size 4 --pretrained_weights weights/darknet53.conv.74
   
 ### Prueba local en imágen y video
 
    Descargar el archivo .pth y copiarlo en el directorio checkpoints local
    
-   	python detectC.py --image_folder data/samplesC/ --model_def config/yolov3-custom3C.cfg --weights_path checkpoints/yolov3_ckpt_252.pth --class_path data/custom/classes.names
+   	python detectC.py --image_folder data/samplesC/ --model_def config/yolov3-custom.cfg --weights_path checkpoints/yolov3_ckpt_252.pth --class_path data/custom/classes.names
    
-   	python detect_cam.py --model_def config/yolov3-custom3C.cfg --weights_path checkpoints/yolov3_ckpt_252.pth --class_path data/custom/classes.names --conf_thres 0.6
+   	python detect_cam.py --model_def config/yolov3-custom.cfg --weights_path checkpoints/yolov3_ckpt_252.pth --class_path data/custom/classes.names --conf_thres 0.6
    
