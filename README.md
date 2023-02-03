@@ -10,7 +10,7 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
 
 	$pip install opencv-python numpy matplotlib tensorboard terminaltables pillow tqdm
 	
-	$pip install pytorch torchvision cudatoolkit
+	$pip install torch torchvision cudatoolkit
 
 
 ### Preparar Dataset
