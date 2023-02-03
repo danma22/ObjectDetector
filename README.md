@@ -6,6 +6,13 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
 
 # Implementación:
 
+### Librerias a descargar
+
+	$pip install opencv-python numpy matplotlib tensorboard terminaltables pillow tqdm
+	
+	$pup install pytorch torchvision cudatoolkit
+
+
 ### Preparar Dataset
   Ejecutar labelImg.py
   
@@ -15,11 +22,10 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
   
   Se deben obtener los archivos labels (.txt) de las imagenes de tu dataset
   
-  Luego ejecutar jupyter notebook desde anaconda y abrir Yolov3Files.ipyb para generar los archivos train.txt y valid.txt
+  Luego ejecutar el archivo split_train_val.py para generar los archivos train.txt y valid.txt
   
-  $ jupyter notebook
-  
-  Finalmente se obtienen los siguientes archivos
+### Preparar archivos de configuración
+  Finalmente, son requeridos los siguientes archivos
   
   	En data/custom/images las imagenes del dataset
   
@@ -33,15 +39,19 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
   
   	En la carpeta config/ modificar el archivo custom.data con el número de clases del dataset
   
-  Para el archivo .cfg abrir el archivo bash .sh y modificar el parámetro NUM_CLASSES=3
+  Para el archivo .cfg abrir el archivo con el siguiente comando: 
   
-  Ejecutarlo usango Git para windows
-  
-  Si no tienes instalado Git para windows lo puedes descargar en el siguieinte enlace
-  
-  https://git-scm.com/download/win
-  
-  
+  	$bash create_custom_model.sh <numero de clases>
+
+  Localmente se puede descargar los pesos de la red neuronal para entrenar localmente, con el archivo download_darknet.sh en la carpeta /weights
+  	
+	$bash download_darknet.sh
+	
+### Entrenamiento local
+
+	$!python train.py --model_def config/yolov3-custom.cfg --data_config config/custom.data --epochs 200 --batch_size 4 --pretrained_weights weights/darknet53.conv.74
+	
+	
 ### Entrenamiento en google colab
   	$!pip install torch==1.1 torchvision==0.3
   
