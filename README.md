@@ -53,6 +53,9 @@ https://pjreddie.com/media/files/papers/YOLOv3.pdf
 	
 	
 ### Entrenamiento en google colab
+
+Se requiere tener las carpetas de custom y config dentro de algun directorio de drive, el cual esté vinculado con Google Colab
+
   	$!pip install torch==1.1 torchvision==0.3
   
   	$!pip install opencv-python numpy matplotlib tensorboard terminaltables pillow tqdm
